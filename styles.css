@@ -7,43 +7,60 @@
 
 /* Body Styling */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f8ff;
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
     color: #333;
     line-height: 1.6;
-    padding: 0;
-    margin: 0;
 }
 
 /* Header Styling with Full Background Image */
 header {
     background-image: url('path_to_your_header_image.jpg'); /* Replace with your header/cover image */
-    background-size: cover; /* Ensures the background image covers the full header */
-    background-position: center center; /* Centers the background image */
+    background-size: cover; /* Ensure the background image covers the full header */
+    background-position: center center; /* Center the background image */
     color: white;
-    padding: 4rem 0; /* Adjust padding as needed */
+    padding: 5rem 0; /* Increase padding for more breathing space */
     text-align: center;
     position: relative;
-    height: 400px; /* Adjust height as needed */
+    height: 500px; /* Adjust height for a taller header */
 }
 
 /* Profile Image inside Header (round image) */
 .header-img {
-    width: 150px;   /* Smaller size for the profile image */
-    height: 150px;  /* Maintain aspect ratio */
-    border-radius: 50%; /* Makes the image round */
+    width: 160px;   /* Slightly larger profile image */
+    height: 160px;  /* Maintain aspect ratio */
+    border-radius: 50%; /* Round shape */
     margin-bottom: 20px;
-    object-fit: cover;  /* Ensures image fills the circular container properly */
+    object-fit: cover;  /* Ensures image fits perfectly */
     position: absolute; /* Keeps it centered over the header */
     top: 50%; /* Vertically center */
     left: 50%; /* Horizontally center */
-    transform: translate(-50%, -50%); /* Exactly centers the image */
+    transform: translate(-50%, -50%); /* Exactly centers it */
+    border: 5px solid white; /* Adds a white border around the profile photo */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Adds a subtle shadow */
 }
 
-/* Container for Centering the Content */
-.container {
-    width: 80%;
-    margin: 0 auto;
+/* Heading and Intro Styling */
+h1 {
+    font-size: 2.5rem;
+    margin-top: 20px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.intro {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: #f7f7f7;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+/* Button Container */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
 }
 
 /* Buttons Styling */
@@ -52,8 +69,9 @@ button {
     padding: 1rem 2rem;
     border: none;
     cursor: pointer;
-    margin-top: 1rem;
-    transition: background-color 0.3s ease;
+    transition: transform 0.2s ease-in-out;
+    border-radius: 5px;
+    font-weight: bold;
 }
 
 /* YES Button */
@@ -64,6 +82,7 @@ button {
 
 .answer-btn.yes-btn:hover {
     background-color: #ff66a1;
+    transform: scale(1.05); /* Slight zoom effect */
 }
 
 /* NO Button */
@@ -74,13 +93,7 @@ button {
 
 .answer-btn.no-btn:hover {
     background-color: #ff4c4c;
-}
-
-/* Button Container */
-.button-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+    transform: scale(1.05); /* Slight zoom effect */
 }
 
 /* Footer Styling */
@@ -89,4 +102,48 @@ footer {
     padding: 1.5rem 0;
     text-align: center;
     color: white;
+}
+
+/* Container for Centering Content */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Section Styling */
+section {
+    padding: 3rem 0;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        height: 400px;
+        padding: 4rem 0;
+    }
+
+    .header-img {
+        width: 130px;
+        height: 130px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .button-container {
+        flex-direction: column;
+        gap: 20px;
+    }
 }
