@@ -3,14 +3,17 @@ const noButton = document.querySelector('.no-btn');
 
 // Function to make the button jump to a random position
 function makeButtonJump() {
-    // Get the container dimensions
-    const container = document.querySelector('.button-container');
-    const containerWidth = container.offsetWidth;
-    const containerHeight = container.offsetHeight;
+    // Get the dimensions of the viewport (the visible area of the page)
+    const viewportWidth = window.innerWidth;
+    const viewportHeight = window.innerHeight;
 
-    // Calculate random positions within the container
-    const randomX = Math.floor(Math.random() * (containerWidth - noButton.offsetWidth));
-    const randomY = Math.floor(Math.random() * (containerHeight - noButton.offsetHeight));
+    // Get the dimensions of the NO button
+    const buttonWidth = noButton.offsetWidth;
+    const buttonHeight = noButton.offsetHeight;
+
+    // Calculate random positions within the viewport
+    const randomX = Math.floor(Math.random() * (viewportWidth - buttonWidth));
+    const randomY = Math.floor(Math.random() * (viewportHeight - buttonHeight));
 
     // Apply the random position using the CSS transform property
     noButton.style.transform = `translate(${randomX}px, ${randomY}px)`;
