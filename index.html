@@ -9,21 +9,30 @@
 <body>
     <header>
         <div class="container">
-            <!-- Profile Image inside the Header -->
-            <img src="IMG-20241106-WA0072[1].jpg" alt="Profile Image" class="header-img">
             <h1>Hey [Her Name], I Have Something Special to Ask...</h1>
             <p class="intro">Welcome to a little surprise I’ve been planning just for you.</p>
+            <!-- Rounded and smaller image -->
+            <img src="special-photo.jpg" alt="A beautiful memory" />
         </div>
     </header>
+
+    <section id="story">
+        <div class="container">
+            <h2>Our Journey</h2>
+            <p>Here’s the story of how we met...</p>
+            <p>More personal details about your relationship—special moments and memories...</p>
+        </div>
+    </section>
 
     <section id="question">
         <div class="container">
             <h2>The Big Question!</h2>
             <p class="heartfelt-message">So... will you be my girlfriend?</p>
-            <div class="button-container">
-                <button class="answer-btn yes-btn">YES!</button>
-                <button class="answer-btn no-btn" id="noButton">NO!</button>
+            <div class="countdown">
+                <p>Time until the big reveal:</p>
+                <p id="timer"></p>
             </div>
+            <button class="answer-btn">YES!</button>
         </div>
     </section>
 
