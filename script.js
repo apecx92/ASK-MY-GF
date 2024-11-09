@@ -16,7 +16,9 @@ function makeButtonJump() {
     const randomY = Math.floor(Math.random() * (viewportHeight - buttonHeight));
 
     // Apply the random position using the CSS transform property
-    noButton.style.transform = `translate(${randomX}px, ${randomY}px)`;
+    noButton.style.position = 'absolute'; // Make the button's position absolute for free movement
+    noButton.style.left = `${randomX}px`;
+    noButton.style.top = `${randomY}px`;
 }
 
 // Add event listener to the NO button
