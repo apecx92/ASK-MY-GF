@@ -1,10 +1,11 @@
-/* styles.css */
+/* Reset default margin and padding */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Basic body styling */
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f8ff;
@@ -12,6 +13,7 @@ body {
     line-height: 1.6;
 }
 
+/* Header Styling */
 header {
     background-color: #ff77b9;
     color: white;
@@ -19,33 +21,39 @@ header {
     text-align: center;
 }
 
+/* Container for centering content */
 .container {
     width: 80%;
     margin: 0 auto;
 }
 
+/* Heading and paragraph inside header */
 h1, h2 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* Story Section */
 #story {
     background-color: #fff0f5;
     padding: 3rem 0;
     text-align: center;
 }
 
+/* Question Section */
 #question {
     background-color: #ffcccb;
     padding: 3rem 0;
     text-align: center;
 }
 
+/* Heartfelt message */
 .heartfelt-message {
     font-size: 1.5rem;
     font-weight: bold;
     margin: 1rem 0;
 }
 
+/* Button Styling */
 button {
     background-color: #ff77b9;
     color: white;
@@ -60,6 +68,7 @@ button:hover {
     background-color: #ff66a1;
 }
 
+/* Footer Styling */
 footer {
     background-color: #ff77b9;
     padding: 1.5rem 0;
@@ -67,22 +76,31 @@ footer {
     color: white;
 }
 
+/* Countdown Timer Styling */
 .countdown {
     font-size: 1.5rem;
     margin-top: 2rem;
 }
-To add that CSS rule to your styles.css file, follow these steps:
-1. Open Your styles.css File
 
-If you already have a styles.css file in your project, open it.
-2. Add the CSS Code for the Image
-
-You can simply copy and paste the following CSS code into your styles.css file. You can add it at the end of the file or in a specific section related to images.
-
-/* Style for images */
+/* Styling for Images (Rounded and Small) */
 img {
-    max-width: 100%;
-    height: auto;
+    width: 150px; /* Set the width of the image */
+    height: 150px; /* Set the height to match the width for a perfect circle */
+    border-radius: 50%; /* This makes the image round */
+    object-fit: cover; /* Ensures the image fills the circle without distortion */
     display: block;
-    margin: 20px auto;
+    margin: 20px auto; /* Centers the image horizontally */
 }
+
+/* Responsive adjustments (optional) */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    img {
+        width: 120px; /* Make the image smaller on mobile */
+        height: 120px;
+    }
+}
+
