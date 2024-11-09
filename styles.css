@@ -125,4 +125,14 @@ img {
         width: 120px; /* Make the image smaller on mobile */
         height: 120px;
     }
+
+    .answer-btn {
+        font-size: 1rem; /* Smaller button text */
+        padding: 0.8rem 1.5rem; /* Adjust button size for mobile */
+    }
+
+    .button-container {
+        flex-direction: column; /* Stack buttons vertically on mobile */
+        gap: 10px;
+    }
 }
