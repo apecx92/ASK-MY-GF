@@ -1,7 +1,10 @@
 // Timer functionality
 let timerDuration = 300; // 5 minutes in seconds
 const timerDisplay = document.getElementById("timer");
+const yesButton = document.querySelector('.yes-btn'); // Get the YES button
+const noButton = document.querySelector('.no-btn'); // Get the NO button
 
+// Function to update the timer
 function updateTimer() {
     // Calculate minutes and seconds from the total seconds
     const minutes = Math.floor(timerDuration / 60);
@@ -16,15 +19,19 @@ function updateTimer() {
     } else {
         // When the timer reaches 0, stop the countdown and show a message
         timerDisplay.textContent = "Time's up!";
+        autoClickYesButton(); // Automatically click the YES button
     }
+}
+
+// Function to simulate a click on the YES button
+function autoClickYesButton() {
+    yesButton.click(); // Trigger the YES button's action
 }
 
 // Update the timer every second
 setInterval(updateTimer, 1000);
 
-// Button functionality to make the NO button jump to a random location
-const noButton = document.querySelector('.no-btn');
-
+// Function to make the NO button jump randomly within the viewport
 function makeButtonJump() {
     const viewportWidth = window.innerWidth;
     const viewportHeight = window.innerHeight;
@@ -40,4 +47,11 @@ function makeButtonJump() {
     noButton.style.top = `${randomY}px`;
 }
 
+// Listen for click event on NO button and make it jump
 noButton.addEventListener('click', makeButtonJump);
+
+// Optionally: Add behavior for the YES button, if needed (e.g., show a message)
+yesButton.addEventListener('click', () => {
+    alert("Yay! She said YES! 💖");
+    // You can add any additional actions here after the YES button is clicked.
+});
