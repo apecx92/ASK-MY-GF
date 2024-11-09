@@ -11,12 +11,12 @@ function makeButtonJump() {
     const buttonWidth = noButton.offsetWidth;
     const buttonHeight = noButton.offsetHeight;
 
-    // Calculate random positions within the viewport, ensuring the button stays on screen
+    // Ensure the random position is within bounds
     const randomX = Math.floor(Math.random() * (viewportWidth - buttonWidth));
     const randomY = Math.floor(Math.random() * (viewportHeight - buttonHeight));
 
     // Apply the random position using the CSS 'top' and 'left' properties
-    noButton.style.position = 'fixed'; // Make the button's position fixed to stay within the viewport
+    noButton.style.position = 'fixed'; // Keep button fixed within the viewport
     noButton.style.left = `${randomX}px`;
     noButton.style.top = `${randomY}px`;
 }
