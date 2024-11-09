@@ -1,127 +1,50 @@
-/* Reset default margin and padding */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Basic body styling */
+/* Basic Styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f8ff;
-    color: #333;
-    line-height: 1.6;
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f8f8;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
 
-/* Header Styling */
-header {
-    background-color: #ff77b9;
-    color: white;
-    padding: 2rem 0;
-    text-align: center;
-}
-
-/* Container for centering content */
-.container {
-    width: 80%;
-    margin: 0 auto;
-}
-
-/* Heading and paragraph inside header */
 h1, h2 {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #ff6f61; /* Soft romantic color */
 }
 
-/* Story Section */
-#story {
-    background-color: #fff0f5;
-    padding: 3rem 0;
-    text-align: center;
-}
-
-/* Question Section */
-#question {
-    background-color: #ffcccb;
-    padding: 3rem 0;
-    text-align: center;
-}
-
-/* Heartfelt message */
-.heartfelt-message {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin: 1rem 0;
-}
-
-/* Button Styling */
 button {
-    font-size: 1.2rem;
-    padding: 1rem 2rem;
-    border: none;
-    cursor: pointer;
-    margin-top: 1rem;
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Added transform for smooth movement */
+  background-color: #ff6f61;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
-/* YES Button Styling */
-.answer-btn.yes-btn {
-    background-color: #ff77b9; /* Pink color */
-    color: white;
+button:hover {
+  background-color: #ff3b2e;
 }
 
-.answer-btn.yes-btn:hover {
-    background-color: #ff66a1;
+/* Landing Page */
+#landing {
+  padding: 100px 20px;
+  background-color: #ffefd5; /* Soft pastel */
+  border-bottom: 2px solid #ff6f61;
 }
 
-/* NO Button Styling */
-.answer-btn.no-btn {
-    background-color: #ff5e5e; /* Red color */
-    color: white;
+/* Proposal Page */
+#proposal {
+  padding: 100px 20px;
+  background-color: #fff0f0;
 }
 
-.answer-btn.no-btn:hover {
-    background-color: #ff4c4c;
-}
-
-/* Button Container (to position them side by side) */
-.button-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px; /* Space between the buttons */
-}
-
-/* Footer Styling */
 footer {
-    background-color: #ff77b9;
-    padding: 1.5rem 0;
-    text-align: center;
-    color: white;
-}
-
-/* Countdown Timer Styling */
-.countdown {
-    font-size: 1.5rem;
-    margin-top: 2rem;
-}
-
-/* Styling for Images (Rounded and Small) */
-img {
-    width: 150px; /* Set the width of the image */
-    height: 150px; /* Set the height to match the width for a perfect circle */
-    border-radius: 50%; /* This makes the image round */
-    object-fit: cover; /* Ensures the image fits the circle without distortion */
-    display: block;
-    margin: 20px auto; /* Centers the image horizontally */
-}
-
-/* Responsive adjustments (optional) */
-@media (max-width: 768px) {
-    .container {
-        width: 90%;
-    }
-
-    img {
-        width: 120px; /* Make the image smaller on mobile */
-        height: 120px;
-    }
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
 }
