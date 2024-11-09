@@ -15,5 +15,6 @@ function makeButtonJump() {
     noButton.style.transform = `translate(${randomX}px, ${randomY}px)`;
 }
 
-// Add event listener to the NO button
+// Add event listener for both 'click' (desktop) and 'touchstart' (mobile)
 noButton.addEventListener('click', makeButtonJump);
+noButton.addEventListener('touchstart', makeButtonJump); // For mobile touch devices
