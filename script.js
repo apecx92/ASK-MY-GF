@@ -1,18 +1,20 @@
-// script.js
-const countdownDate = new Date("Nov 9, 2024 18:00:00").getTime();
+// Get the NO button element
+const noButton = document.querySelector('.no-btn');
 
-const timer = setInterval(function() {
-    const now = new Date().getTime();
-    const distance = countdownDate - now;
+// Function to make the button jump to a random position
+function makeButtonJump() {
+    // Get the container dimensions
+    const container = document.querySelector('.button-container');
+    const containerWidth = container.offsetWidth;
+    const containerHeight = container.offsetHeight;
 
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    // Calculate random positions within the container
+    const randomX = Math.floor(Math.random() * (containerWidth - noButton.offsetWidth));
+    const randomY = Math.floor(Math.random() * (containerHeight - noButton.offsetHeight));
 
-    document.getElementById("timer").innerHTML = hours + "h " + minutes + "m " + seconds + "s ";
+    // Apply the random position using the CSS transform property
+    noButton.style.transform = `translate(${randomX}px, ${randomY}px)`;
+}
 
-    if (distance < 0) {
-        clearInterval(timer);
-        document.getElementById("timer").innerHTML = "It's time to ask!";
-    }
-}, 1000);
+// Add event listener to the NO button
+noButton.addEventListener('click', makeButtonJump);
