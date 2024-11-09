@@ -1,14 +1,20 @@
-// JavaScript to handle button clicks and page transitions
-document.getElementById("startButton").addEventListener("click", function() {
-  document.getElementById("landing").style.display = "none";
-  document.getElementById("proposal").style.display = "block";
-});
+// Get the NO button element
+const noButton = document.querySelector('.no-btn');
 
-document.getElementById("yesButton").addEventListener("click", function() {
-  alert("YAY! I'm so happy you said yes!");
-  // You can redirect to a special page or just keep the message.
-});
+// Function to make the button jump to a random position
+function makeButtonJump() {
+    // Get the container dimensions
+    const container = document.querySelector('.button-container');
+    const containerWidth = container.offsetWidth;
+    const containerHeight = container.offsetHeight;
 
-document.getElementById("noButton").addEventListener("click", function() {
-  alert("That's okay! Take your time.");
-});
+    // Calculate random positions within the container
+    const randomX = Math.floor(Math.random() * (containerWidth - noButton.offsetWidth));
+    const randomY = Math.floor(Math.random() * (containerHeight - noButton.offsetHeight));
+
+    // Apply the random position using the CSS transform property
+    noButton.style.transform = `translate(${randomX}px, ${randomY}px)`;
+}
+
+// Add event listener to the NO button
+noButton.addEventListener('click', makeButtonJump);
