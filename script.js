@@ -4,6 +4,10 @@ const timerDisplay = document.getElementById("timer");
 const yesButton = document.querySelector('.yes-btn'); // Get the YES button
 const noButton = document.querySelector('.no-btn'); // Get the NO button
 
+// Get the Terms and Conditions modal and submit button
+const termsModal = document.getElementById("termsModal");
+const submitBtn = document.getElementById("submitBtn");
+
 // Function to update the timer
 function updateTimer() {
     // Calculate minutes and seconds from the total seconds
@@ -50,8 +54,17 @@ function makeButtonJump() {
 // Listen for click event on NO button and make it jump
 noButton.addEventListener('click', makeButtonJump);
 
-// Optionally: Add behavior for the YES button, if needed (e.g., show a message)
+// Function to open the Terms and Conditions pop-up when YES is clicked
 yesButton.addEventListener('click', () => {
-    alert("Yay! She said YES! 💖");
-    // You can add any additional actions here after the YES button is clicked.
+    // Show the Terms and Conditions modal
+    termsModal.style.display = "block";
+});
+
+// Listen for the Submit button in the modal
+submitBtn.addEventListener('click', () => {
+    // Hide the Terms and Conditions modal
+    termsModal.style.display = "none";
+
+    // Show a confirmation message (you can customize this)
+    alert("We will process your request and it will take 3 to 5 business days.");
 });
