@@ -1,26 +1,22 @@
-// Get the NO button element
-const noButton = document.querySelector('.no-btn');
+// JavaScript for making the NO button jump randomly
+const noButton = document.getElementById('noButton');
 
-// Function to make the button jump to a random position
-function makeButtonJump() {
-    // Get the window dimensions
+// Function to move the button to a random position
+function moveButtonRandomly() {
     const windowWidth = window.innerWidth;
     const windowHeight = window.innerHeight;
-
-    // Get the button dimensions
     const buttonWidth = noButton.offsetWidth;
     const buttonHeight = noButton.offsetHeight;
 
-    // Calculate random positions within the window but ensure the button stays inside the viewport
-    const randomX = Math.floor(Math.random() * (windowWidth - buttonWidth));
-    const randomY = Math.floor(Math.random() * (windowHeight - buttonHeight));
+    // Generate random position within the window
+    const randomX = Math.random() * (windowWidth - buttonWidth);
+    const randomY = Math.random() * (windowHeight - buttonHeight);
 
-    // Apply the random position using absolute positioning
-    noButton.style.position = 'absolute'; // Set position to absolute
-    noButton.style.left = `${randomX}px`; // Set the left position
-    noButton.style.top = `${randomY}px`;  // Set the top position
+    // Set the new position of the NO button
+    noButton.style.position = 'absolute';
+    noButton.style.left = `${randomX}px`;
+    noButton.style.top = `${randomY}px`;
 }
 
-// Add event listener for both 'click' (desktop) and 'touchstart' (mobile)
-noButton.addEventListener('click', makeButtonJump);
-noButton.addEventListener('touchstart', makeButtonJump); // For mobile touch devices
+// Event listener to make the NO button jump when clicked
+noButton.addEventListener('click', moveButtonRandomly);
