@@ -137,3 +137,24 @@ img {
         gap: 10px;
     }
 }
+/* Timer Styling */
+.countdown {
+    font-size: 2rem;  /* Larger font size for better visibility */
+    margin-top: 2rem;
+    color: #333;  /* Dark color to make it stand out */
+    text-align: center;
+}
+
+/* Additional styles for the Timer (Desktop) */
+@media (min-width: 769px) {
+    .countdown {
+        font-size: 2.5rem;  /* Slightly larger font for desktop */
+    }
+}
+
+/* Responsive adjustments for Timer (Mobile) */
+@media (max-width: 768px) {
+    .countdown {
+        font-size: 1.8rem;  /* Slightly smaller font on mobile */
+    }
+}
