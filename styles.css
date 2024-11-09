@@ -16,17 +16,13 @@ body {
 /* Header Styling with Full Background Image */
 header {
     background-image: url('path_to_your_header_image.jpg'); /* Replace with your header/cover image */
-    background-size: cover; /* Ensure the background image covers the full header */
-    background-position: center center; /* Center the background image */
+    background-size: cover;
+    background-position: center center;
     color: white;
-    padding: 5rem 0; /* Increase padding for more breathing space */
+    padding: 5rem 0;
     text-align: center;
     position: relative;
     height: 500px; /* Adjust height for a taller header */
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Vertically center the content */
-    align-items: center; /* Horizontally center the content */
 }
 
 /* Profile Image inside Header (round image) */
@@ -35,7 +31,7 @@ header {
     height: 160px;  /* Maintain aspect ratio */
     border-radius: 50%; /* Round shape */
     margin-bottom: 20px;
-    object-fit: cover;  /* Ensures image fits perfectly */
+    object-fit: cover;
     border: 5px solid white; /* Adds a white border around the profile photo */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Adds a subtle shadow */
 }
@@ -130,20 +126,20 @@ p {
 @media (max-width: 768px) {
     header {
         height: 400px; /* Reduce header height on small screens */
-        padding: 3rem 0; /* Reduce padding for mobile */
+        padding: 3rem 0;
     }
 
     /* Profile Image */
     .header-img {
         width: 120px;   /* Smaller profile image on mobile */
         height: 120px;  /* Maintain aspect ratio */
-        margin-bottom: 20px; /* Space between image and text */
+        margin-bottom: 20px;
     }
 
     /* Heading Styling */
     h1 {
         font-size: 1.8rem; /* Smaller font size on mobile */
-        margin-top: 10px;  /* Adjust space */
+        margin-top: 10px;
     }
 
     /* Intro Text Styling */
@@ -154,7 +150,7 @@ p {
 
     /* Button Container */
     .button-container {
-        flex-direction: column; /* Stack buttons vertically */
-        gap: 20px;  /* Add space between buttons */
+        flex-direction: column;
+        gap: 20px;
     }
 }
