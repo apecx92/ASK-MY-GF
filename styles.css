@@ -71,3 +71,18 @@ footer {
     font-size: 1.5rem;
     margin-top: 2rem;
 }
+To add that CSS rule to your styles.css file, follow these steps:
+1. Open Your styles.css File
+
+If you already have a styles.css file in your project, open it.
+2. Add the CSS Code for the Image
+
+You can simply copy and paste the following CSS code into your styles.css file. You can add it at the end of the file or in a specific section related to images.
+
+/* Style for images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
