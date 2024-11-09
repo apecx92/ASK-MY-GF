@@ -27,7 +27,7 @@ header {
 
 /* Profile Image inside Header (round image) */
 .header-img {
-    width: 160px;   /* Slightly larger profile image */
+    width: 160px;   /* Default profile image size */
     height: 160px;  /* Maintain aspect ratio */
     border-radius: 50%; /* Round shape */
     margin-bottom: 20px;
@@ -91,59 +91,4 @@ button {
     color: white;
 }
 
-.answer-btn.no-btn:hover {
-    background-color: #ff4c4c;
-    transform: scale(1.05); /* Slight zoom effect */
-}
-
-/* Footer Styling */
-footer {
-    background-color: #ff77b9;
-    padding: 1.5rem 0;
-    text-align: center;
-    color: white;
-}
-
-/* Container for Centering Content */
-.container {
-    width: 80%;
-    margin: 0 auto;
-    text-align: center;
-}
-
-/* Section Styling */
-section {
-    padding: 3rem 0;
-}
-
-h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    header {
-        height: 400px;
-        padding: 4rem 0;
-    }
-
-    .header-img {
-        width: 130px;
-        height: 130px;
-    }
-
-    h1 {
-        font-size: 2rem;
-    }
-
-    .button-container {
-        flex-direction: column;
-        gap: 20px;
-    }
-}
+.answer-btn.no-btn
