@@ -15,25 +15,32 @@ body {
     margin: 0;
 }
 
-/* Header Styling */
+/* Header Styling with Full Background Image */
 header {
-    background-color: #ff77b9;
+    background-image: url('path_to_your_header_image.jpg'); /* Replace with your header/cover image */
+    background-size: cover; /* Ensures the background image covers the full header */
+    background-position: center center; /* Centers the background image */
     color: white;
-    padding: 2rem 0;
+    padding: 4rem 0; /* Adjust padding as needed */
     text-align: center;
     position: relative;
+    height: 400px; /* Adjust height as needed */
 }
 
-/* Rounded and Smaller Image Styling */
+/* Profile Image inside Header (round image) */
 .header-img {
-    width: 150px;   /* Smaller size */
+    width: 150px;   /* Smaller size for the profile image */
     height: 150px;  /* Maintain aspect ratio */
     border-radius: 50%; /* Makes the image round */
     margin-bottom: 20px;
     object-fit: cover;  /* Ensures image fills the circular container properly */
+    position: absolute; /* Keeps it centered over the header */
+    top: 50%; /* Vertically center */
+    left: 50%; /* Horizontally center */
+    transform: translate(-50%, -50%); /* Exactly centers the image */
 }
 
-/* Container for Centering */
+/* Container for Centering the Content */
 .container {
     width: 80%;
     margin: 0 auto;
