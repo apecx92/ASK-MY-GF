@@ -7,9 +7,13 @@ function makeButtonJump() {
     const windowWidth = window.innerWidth;
     const windowHeight = window.innerHeight;
 
-    // Calculate random positions within the window
-    const randomX = Math.floor(Math.random() * (windowWidth - noButton.offsetWidth));
-    const randomY = Math.floor(Math.random() * (windowHeight - noButton.offsetHeight));
+    // Get the button dimensions
+    const buttonWidth = noButton.offsetWidth;
+    const buttonHeight = noButton.offsetHeight;
+
+    // Calculate random positions within the window but ensure the button stays inside the viewport
+    const randomX = Math.floor(Math.random() * (windowWidth - buttonWidth));
+    const randomY = Math.floor(Math.random() * (windowHeight - buttonHeight));
 
     // Apply the random position using the CSS transform property
     noButton.style.transform = `translate(${randomX}px, ${randomY}px)`;
