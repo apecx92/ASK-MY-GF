@@ -1,22 +1,20 @@
-// JavaScript for making the NO button jump randomly
-const noButton = document.getElementById('noButton');
+// Get the NO button element
+const noButton = document.querySelector('.no-btn');
 
-// Function to move the button to a random position
-function moveButtonRandomly() {
-    const windowWidth = window.innerWidth;
-    const windowHeight = window.innerHeight;
-    const buttonWidth = noButton.offsetWidth;
-    const buttonHeight = noButton.offsetHeight;
+// Function to make the button jump to a random position
+function makeButtonJump() {
+    // Get the container dimensions
+    const container = document.querySelector('.button-container');
+    const containerWidth = container.offsetWidth;
+    const containerHeight = container.offsetHeight;
 
-    // Generate random position within the window
-    const randomX = Math.random() * (windowWidth - buttonWidth);
-    const randomY = Math.random() * (windowHeight - buttonHeight);
+    // Calculate random positions within the container
+    const randomX = Math.floor(Math.random() * (containerWidth - noButton.offsetWidth));
+    const randomY = Math.floor(Math.random() * (containerHeight - noButton.offsetHeight));
 
-    // Set the new position of the NO button
-    noButton.style.position = 'absolute';
-    noButton.style.left = `${randomX}px`;
-    noButton.style.top = `${randomY}px`;
+    // Apply the random position using the CSS transform property
+    noButton.style.transform = `translate(${randomX}px, ${randomY}px)`;
 }
 
-// Event listener to make the NO button jump when clicked
-noButton.addEventListener('click', moveButtonRandomly);
+// Add event listener to the NO button
+noButton.addEventListener('click', makeButtonJump);
