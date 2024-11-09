@@ -11,7 +11,7 @@ function makeButtonJump() {
     const buttonWidth = noButton.offsetWidth;
     const buttonHeight = noButton.offsetHeight;
 
-    // Calculate random positions within the viewport
+    // Calculate random positions within the viewport, ensuring the button stays on screen
     const randomX = Math.floor(Math.random() * (viewportWidth - buttonWidth));
     const randomY = Math.floor(Math.random() * (viewportHeight - buttonHeight));
 
