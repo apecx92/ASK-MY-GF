@@ -11,7 +11,8 @@ body {
     background-color: #f0f8ff;
     color: #333;
     line-height: 1.6;
-    overflow: hidden; /* Prevents scrollbars from appearing */
+    overflow-y: scroll; /* Enable vertical scrolling */
+    height: 100%; /* Ensure the body covers the full height */
 }
 
 /* Header Styling */
