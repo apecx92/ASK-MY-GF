@@ -23,6 +23,10 @@ header {
     text-align: center;
     position: relative;
     height: 500px; /* Adjust height for a taller header */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center the content */
+    align-items: center; /* Horizontally center the content */
 }
 
 /* Profile Image inside Header (round image) */
@@ -32,10 +36,6 @@ header {
     border-radius: 50%; /* Round shape */
     margin-bottom: 20px;
     object-fit: cover;  /* Ensures image fits perfectly */
-    position: absolute; /* Keeps it centered over the header */
-    top: 50%; /* Vertically center */
-    left: 50%; /* Horizontally center */
-    transform: translate(-50%, -50%); /* Exactly centers it */
     border: 5px solid white; /* Adds a white border around the profile photo */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Adds a subtle shadow */
 }
@@ -91,4 +91,70 @@ button {
     color: white;
 }
 
-.answer-btn.no-btn
+.answer-btn.no-btn:hover {
+    background-color: #ff4c4c;
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Footer Styling */
+footer {
+    background-color: #ff77b9;
+    padding: 1.5rem 0;
+    text-align: center;
+    color: white;
+}
+
+/* Container for Centering Content */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Section Styling */
+section {
+    padding: 3rem 0;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    header {
+        height: 400px; /* Reduce header height on small screens */
+        padding: 3rem 0; /* Reduce padding for mobile */
+    }
+
+    /* Profile Image */
+    .header-img {
+        width: 120px;   /* Smaller profile image on mobile */
+        height: 120px;  /* Maintain aspect ratio */
+        margin-bottom: 20px; /* Space between image and text */
+    }
+
+    /* Heading Styling */
+    h1 {
+        font-size: 1.8rem; /* Smaller font size on mobile */
+        margin-top: 10px;  /* Adjust space */
+    }
+
+    /* Intro Text Styling */
+    .intro {
+        font-size: 1rem; /* Smaller font size */
+        margin-top: 10px;
+    }
+
+    /* Button Container */
+    .button-container {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 20px;  /* Add space between buttons */
+    }
+}
