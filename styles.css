@@ -1,16 +1,18 @@
-/* Reset default margin and padding */
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Basic body styling */
+/* Body Styling */
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f8ff;
     color: #333;
     line-height: 1.6;
+    padding: 0;
+    margin: 0;
 }
 
 /* Header Styling */
@@ -19,53 +21,37 @@ header {
     color: white;
     padding: 2rem 0;
     text-align: center;
+    position: relative;
 }
 
-/* Container for centering content */
+/* Rounded and Smaller Image Styling */
+.header-img {
+    width: 150px;   /* Smaller size */
+    height: 150px;  /* Maintain aspect ratio */
+    border-radius: 50%; /* Makes the image round */
+    margin-bottom: 20px;
+    object-fit: cover;  /* Ensures image fills the circular container properly */
+}
+
+/* Container for Centering */
 .container {
     width: 80%;
     margin: 0 auto;
 }
 
-/* Heading and paragraph inside header */
-h1, h2 {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-/* Story Section */
-#story {
-    background-color: #fff0f5;
-    padding: 3rem 0;
-    text-align: center;
-}
-
-/* Question Section */
-#question {
-    background-color: #ffcccb;
-    padding: 3rem 0;
-    text-align: center;
-}
-
-/* Heartfelt message */
-.heartfelt-message {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin: 1rem 0;
-}
-
-/* Button Styling */
+/* Buttons Styling */
 button {
     font-size: 1.2rem;
     padding: 1rem 2rem;
     border: none;
     cursor: pointer;
     margin-top: 1rem;
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Added transform for smooth movement */
+    transition: background-color 0.3s ease;
 }
 
-/* YES Button Styling */
+/* YES Button */
 .answer-btn.yes-btn {
-    background-color: #ff77b9; /* Pink color */
+    background-color: #ff77b9;
     color: white;
 }
 
@@ -73,9 +59,9 @@ button {
     background-color: #ff66a1;
 }
 
-/* NO Button Styling */
+/* NO Button */
 .answer-btn.no-btn {
-    background-color: #ff5e5e; /* Red color */
+    background-color: #ff5e5e;
     color: white;
 }
 
@@ -83,11 +69,11 @@ button {
     background-color: #ff4c4c;
 }
 
-/* Button Container (to position them side by side) */
+/* Button Container */
 .button-container {
     display: flex;
     justify-content: center;
-    gap: 20px; /* Space between the buttons */
+    gap: 20px;
 }
 
 /* Footer Styling */
@@ -96,32 +82,4 @@ footer {
     padding: 1.5rem 0;
     text-align: center;
     color: white;
-}
-
-/* Countdown Timer Styling */
-.countdown {
-    font-size: 1.5rem;
-    margin-top: 2rem;
-}
-
-/* Styling for Images (Rounded and Small) */
-img {
-    width: 150px; /* Set the width of the image */
-    height: 150px; /* Set the height to match the width for a perfect circle */
-    border-radius: 50%; /* This makes the image round */
-    object-fit: cover; /* Ensures the image fits the circle without distortion */
-    display: block;
-    margin: 20px auto; /* Centers the image horizontally */
-}
-
-/* Responsive adjustments (optional) */
-@media (max-width: 768px) {
-    .container {
-        width: 90%;
-    }
-
-    img {
-        width: 120px; /* Make the image smaller on mobile */
-        height: 120px;
-    }
 }
