@@ -11,7 +11,7 @@ function makeButtonJump() {
     const buttonWidth = noButton.offsetWidth;
     const buttonHeight = noButton.offsetHeight;
 
-    // Ensure the random position is within bounds
+    // Ensure the random position is within bounds (consider the scroll position)
     const randomX = Math.floor(Math.random() * (viewportWidth - buttonWidth));
     const randomY = Math.floor(Math.random() * (viewportHeight - buttonHeight));
 
