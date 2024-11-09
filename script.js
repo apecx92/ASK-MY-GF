@@ -15,8 +15,10 @@ function makeButtonJump() {
     const randomX = Math.floor(Math.random() * (windowWidth - buttonWidth));
     const randomY = Math.floor(Math.random() * (windowHeight - buttonHeight));
 
-    // Apply the random position using the CSS transform property
-    noButton.style.transform = `translate(${randomX}px, ${randomY}px)`;
+    // Apply the random position using absolute positioning
+    noButton.style.position = 'absolute'; // Set position to absolute
+    noButton.style.left = `${randomX}px`; // Set the left position
+    noButton.style.top = `${randomY}px`;  // Set the top position
 }
 
 // Add event listener for both 'click' (desktop) and 'touchstart' (mobile)
