@@ -1,36 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Will You Be My Girlfriend?</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Will You Be My Girlfriend?</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="home-section">
-        <h1 class="fade-in">Welcome, [Her Name]</h1>
-        <p class="fade-in delay">I've made something special for you...</p>
-        <a href="#story-section" class="next-button">See More</a>
-    </div>
-    
-    <div id="story-section">
-        <h2>Our Story So Far</h2>
-        <p class="fade-in">A little story about our journey together...</p>
-        <a href="#question-section" class="next-button">Next</a>
-    </div>
+  <!-- Landing Page -->
+  <section id="landing">
+    <h1>Welcome to our journey</h1>
+    <p>Let's take a trip down memory lane...</p>
+    <button id="startButton">Start</button>
+  </section>
 
-    <div id="question-section">
-        <h2>Will You Be My Girlfriend?</h2>
-        <div class="heart-animation"></div>
-        <button onclick="answerYes()">Yes</button>
-        <button onclick="answerYes()">Yes, of course!</button>
-    </div>
+  <!-- Proposal Page -->
+  <section id="proposal" style="display:none;">
+    <h2>To the love of my life</h2>
+    <p>From the moment we met, I've known you were special. I can’t imagine my life without you by my side. Will you make me the happiest person in the world and say yes?</p>
+    <button id="yesButton">Yes!</button>
+    <button id="noButton">Not Yet...</button>
+  </section>
 
-    <div id="answer-section" class="hidden">
-        <h2>Thank you!</h2>
-        <p>I'm so happy to have you in my life!</p>
-    </div>
+  <!-- Footer -->
+  <footer>
+    <p>Created with ❤️ by me</p>
+  </footer>
 
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
