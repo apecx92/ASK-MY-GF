@@ -1,209 +1,107 @@
-/* Reset default margin and padding */
+/* Reset margin and padding for all elements */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Basic body styling */
+/* Body styling */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f8ff;
-    color: #333;
-    line-height: 1.6;
-    overflow-y: scroll; /* Enable vertical scrolling */
-    height: 100%; /* Ensure the body covers the full height */
-}
-
-/* Header Styling */
-header {
-    background-color: #ff77b9;
-    color: white;
-    padding: 2rem 0;
-    text-align: center;
-}
-
-/* Container for centering content */
-.container {
-    width: 80%;
-    margin: 0 auto;
-}
-
-/* Heading and paragraph inside header */
-h1, h2 {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-/* Story Section */
-#story {
-    background-color: #fff0f5;
-    padding: 3rem 0;
-    text-align: center;
-}
-
-/* Question Section */
-#question {
-    background-color: #ffcccb;
-    padding: 3rem 0;
-    text-align: center;
-}
-
-/* Heartfelt message */
-.heartfelt-message {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin: 1rem 0;
-}
-
-/* Button Styling */
-button {
-    font-size: 1.2rem;
-    padding: 1rem 2rem;
-    border: none;
-    cursor: pointer;
-    margin-top: 1rem;
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Added transform for smooth movement */
-}
-
-/* YES Button Styling */
-.answer-btn.yes-btn {
-    background-color: #ff77b9; /* Pink color */
-    color: white;
-}
-
-.answer-btn.yes-btn:hover {
-    background-color: #ff66a1;
-}
-
-/* NO Button Styling */
-.answer-btn.no-btn {
-    background-color: #ff5e5e; /* Red color */
-    color: white;
-}
-
-.answer-btn.no-btn:hover {
-    background-color: #ff4c4c;
-}
-
-/* Button Container (to position them side by side) */
-.button-container {
+    background-color: #f9f9f9; /* Light gray background */
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    gap: 20px; /* Space between the buttons */
+    align-items: center;
+    min-height: 100vh;
 }
 
-/* Footer Styling */
-footer {
-    background-color: #ff77b9;
-    padding: 1.5rem 0;
-    text-align: center;
-    color: white;
-}
-
-/* Countdown Timer Styling */
-.countdown {
-    font-size: 1.5rem;
-    margin-top: 2rem;
-}
-
-/* Styling for Images (Rounded and Small) */
-img {
-    width: 150px; /* Set the width of the image */
-    height: 150px; /* Set the height to match the width for a perfect circle */
-    border-radius: 50%; /* This makes the image round */
-    object-fit: cover; /* Ensures the image fits the circle without distortion */
-    display: block;
-    margin: 20px auto; /* Centers the image horizontally */
-}
-
-/* Responsive adjustments (optional) */
-@media (max-width: 768px) {
-    .container {
-        width: 90%;
-    }
-
-    img {
-        width: 120px; /* Make the image smaller on mobile */
-        height: 120px;
-    }
-
-    .answer-btn {
-        font-size: 1rem; /* Smaller button text */
-        padding: 0.8rem 1.5rem; /* Adjust button size for mobile */
-    }
-
-    .button-container {
-        flex-direction: column; /* Stack buttons vertically on mobile */
-        gap: 10px;
-    }
-}
-/* Timer Styling */
-.countdown {
-    font-size: 2rem;  /* Larger font size for better visibility */
-    margin-top: 2rem;
-    color: #333;  /* Dark color to make it stand out */
-    text-align: center;
-}
-
-/* Additional styles for the Timer (Desktop) */
-@media (min-width: 769px) {
-    .countdown {
-        font-size: 2.5rem;  /* Slightly larger font for desktop */
-    }
-}
-
-/* Responsive adjustments for Timer (Mobile) */
-@media (max-width: 768px) {
-    .countdown {
-        font-size: 1.8rem;  /* Slightly smaller font on mobile */
-    }
-}
-/* Modal (Terms and Conditions) Styles */
-.modal {
-    display: none;  /* Hidden by default */
-    position: fixed;
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Black background with transparency */
-}
-
-.modal-content {
-    background-color: white;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;  /* Adjust width */
-    max-width: 600px;
-}
-
-.modal-content h2 {
+/* Header section */
+header {
     text-align: center;
     margin-bottom: 20px;
 }
 
-.modal-content ul {
-    list-style-type: none;
-    padding: 0;
+header img {
+    width: 250px; /* Adjust image size */
+    border-radius: 50%; /* Round image */
+    margin-top: 15px;
 }
 
-.modal-content ul li {
-    margin-bottom: 10px;
-}
-
-#submitBtn {
-    background-color: #4CAF50; /* Green color */
-    color: white;
-    border: none;
-    padding: 10px 20px;
+/* Story Section */
+#story {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    width: 80%; /* Adjust width */
+    max-width: 800px;
     text-align: center;
+}
+
+h2 {
+    color: #333;
+}
+
+/* The Big Question Section */
+#question {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#timer {
+    font-size: 2em;
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+/* Buttons */
+.answer-btn {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border: none;
     cursor: pointer;
-    font-size: 16px;
+    margin: 10px;
     border-radius: 5px;
 }
 
-#submitBtn:hover {
-    background-color: #45a049;
+.yes-btn {
+    background-color: #2ecc71;
+    color: white;
+}
+
+.no-btn {
+    background-color: #e74c3c;
+    color: white;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    width: 70%;
+    max-width: 500px;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.1em;
+    color: #555;
 }
