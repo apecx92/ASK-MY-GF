@@ -1,32 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Will You Be My Girlfriend?</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Girlfriend?</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Landing Page -->
-  <section id="landing">
-    <h1>Welcome to our journey</h1>
-    <p>Let's take a trip down memory lane...</p>
-    <button id="startButton">Start</button>
-  </section>
+    <header>
+        <div class="container">
+            <h1>Hey [Her Name], I Have Something Special to Ask...</h1>
+            <p class="intro">Welcome to a little surprise I’ve been planning just for you.</p>
+        </div>
+    </header>
 
-  <!-- Proposal Page -->
-  <section id="proposal" style="display:none;">
-    <h2>To the love of my life</h2>
-    <p>From the moment we met, I've known you were special. I can’t imagine my life without you by my side. Will you make me the happiest person in the world and say yes?</p>
-    <button id="yesButton">Yes!</button>
-    <button id="noButton">Not Yet...</button>
-  </section>
+    <section id="story">
+        <div class="container">
+            <h2>Our Journey</h2>
+            <p>Here’s the story of how we met...</p>
+            <p>More personal details about your relationship—special moments and memories...</p>
+        </div>
+    </section>
 
-  <!-- Footer -->
-  <footer>
-    <p>Created with ❤️ by me</p>
-  </footer>
+    <section id="question">
+        <div class="container">
+            <h2>The Big Question!</h2>
+            <p class="heartfelt-message">So... will you be my girlfriend?</p>
+            <div class="countdown">
+                <p>Time until the big reveal:</p>
+                <p id="timer"></p>
+            </div>
+            <button class="answer-btn">YES!</button>
+        </div>
+    </section>
 
-  <script src="script.js"></script>
+    <footer>
+        <div class="container">
+            <p>Can't wait to hear from you. 💖</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
