@@ -1,4 +1,4 @@
-/* styles.css */
+/* Reset some basic elements */
 * {
     margin: 0;
     padding: 0;
@@ -10,74 +10,124 @@ body {
     background-color: #f0f8ff;
     color: #333;
     line-height: 1.6;
-}
-
-header {
-    background-color: #ff77b9;
-    color: white;
-    padding: 2rem 0;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
 }
 
 .container {
     width: 80%;
+    max-width: 800px;
     margin: 0 auto;
+    text-align: center;
+    padding: 1rem;
 }
 
-h1, h2 {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/* Header styling */
+header {
+    background-color: #ff77b9;
+    color: white;
+    padding: 2rem;
+    width: 100%;
 }
 
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+header .intro {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+/* Story section */
 #story {
     background-color: #fff0f5;
     padding: 3rem 0;
-    text-align: center;
+    width: 100%;
 }
 
+#story h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+/* Question section */
 #question {
     background-color: #ffcccb;
     padding: 3rem 0;
-    text-align: center;
+    width: 100%;
+}
+
+#question h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
 }
 
 .heartfelt-message {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: bold;
     margin: 1rem 0;
 }
 
-button {
-    background-color: #ff77b9;
-    color: white;
-    font-size: 1.2rem;
-    padding: 1rem 2rem;
-    border: none;
-    cursor: pointer;
+.countdown {
+    font-size: 1.5rem;
     margin-top: 1rem;
 }
 
-button:hover {
-    background-color: #ff66a1;
+#timer {
+    font-weight: bold;
+    color: #ff77b9;
 }
 
-footer {
+button.answer-btn {
     background-color: #ff77b9;
-    padding: 1.5rem 0;
-    text-align: center;
     color: white;
+    font-size: 1.2rem;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    transition: background-color 0.3s;
 }
 
-.countdown {
-    font-size: 1.5rem;
-    margin-top: 2rem;
+button.answer-btn:hover {
+    background-color: #ff66a1;
 }
 
 .response {
     font-size: 1.5rem;
     color: #ff77b9;
     margin-top: 1rem;
+    display: none; /* hidden by default */
 }
 
-.hidden {
-    display: none;
+/* Footer styling */
+footer {
+    background-color: #ff77b9;
+    padding: 1.5rem;
+    width: 100%;
+    color: white;
+    text-align: center;
+    margin-top: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    header h1, #story h2, #question h2 {
+        font-size: 1.5rem;
+    }
+
+    .heartfelt-message, .countdown {
+        font-size: 1.2rem;
+    }
+
+    button.answer-btn {
+        font-size: 1rem;
+        padding: 0.6rem 1.5rem;
+    }
 }
