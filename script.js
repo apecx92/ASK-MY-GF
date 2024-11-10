@@ -1,18 +1,25 @@
-// script.js
-const countdownDate = new Date("Nov 9, 2024 18:00:00").getTime();
+// Countdown Timer Logic
+const countdown = document.getElementById("timer");
 
-const timer = setInterval(function() {
-    const now = new Date().getTime();
-    const distance = countdownDate - now;
+function updateCountdown() {
+    const targetDate = new Date("2024-11-15T00:00:00"); // Set your target date here
+    const now = new Date();
+    const timeDifference = targetDate - now;
 
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    if (timeDifference <= 0) {
+        countdown.textContent = "It's time!";
+        document.querySelector('.answer-btn').style.display = 'block';
+    } else {
+        const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
 
-    document.getElementById("timer").innerHTML = hours + "h " + minutes + "m " + seconds + "s ";
-
-    if (distance < 0) {
-        clearInterval(timer);
-        document.getElementById("timer").innerHTML = "It's time to ask!";
+        countdown.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
     }
-}, 1000);
+}
+
+setInterval(updateCountdown, 1000);
+
+// Show answer button when the countdown ends
+document.querySelector('.answer-btn').style.display = 'none';
