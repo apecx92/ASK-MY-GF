@@ -1,109 +1,209 @@
-/* General Styles */
-body {
-    font-family: 'Arial', sans-serif;
+/* Reset default margin and padding */
+* {
     margin: 0;
     padding: 0;
-    background: #f9f9f9;
-    color: #333;
-    line-height: 1.6;
+    box-sizing: border-box;
 }
 
+/* Basic body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    color: #333;
+    line-height: 1.6;
+    overflow-y: scroll; /* Enable vertical scrolling */
+    height: 100%; /* Ensure the body covers the full height */
+}
+
+/* Header Styling */
+header {
+    background-color: #ff77b9;
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+/* Container for centering content */
 .container {
     width: 80%;
     margin: 0 auto;
-    padding: 20px;
 }
 
+/* Heading and paragraph inside header */
 h1, h2 {
-    font-family: 'Georgia', serif;
-    color: #b34d70;
-    text-align: center;
-}
-
-p {
-    font-size: 1.2em;
-    text-align: center;
-}
-
-button {
-    display: block;
-    margin: 20px auto;
-    background: #b34d70;
-    color: white;
-    padding: 15px 30px;
-    font-size: 1.2em;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background 0.3s ease;
-}
-
-button:hover {
-    background: #d06e98;
-}
-
-/* Header Styles */
-header {
-    background: #ffebef;
-    padding: 50px 0;
-    text-align: center;
-}
-
-header h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
-}
-
-header .intro {
-    font-size: 1.3em;
-    color: #b34d70;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* Story Section */
 #story {
-    background: #fff0f2;
-    padding: 40px 0;
-    margin-bottom: 20px;
-    border-radius: 10px;
-}
-
-#story p {
-    font-size: 1.1em;
-    color: #555;
+    background-color: #fff0f5;
+    padding: 3rem 0;
+    text-align: center;
 }
 
 /* Question Section */
 #question {
-    background: #ffcccb;
-    padding: 50px 0;
+    background-color: #ffcccb;
+    padding: 3rem 0;
     text-align: center;
-    border-radius: 10px;
 }
 
-#question h2 {
-    font-size: 2em;
-    color: #b34d70;
-}
-
+/* Heartfelt message */
 .heartfelt-message {
-    font-size: 2em;
-    margin: 20px 0;
-    color: #b34d70;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 1rem 0;
 }
 
-.countdown p {
-    font-size: 1.2em;
-    margin-top: 10px;
+/* Button Styling */
+button {
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    border: none;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Added transform for smooth movement */
 }
 
-/* Footer Styles */
+/* YES Button Styling */
+.answer-btn.yes-btn {
+    background-color: #ff77b9; /* Pink color */
+    color: white;
+}
+
+.answer-btn.yes-btn:hover {
+    background-color: #ff66a1;
+}
+
+/* NO Button Styling */
+.answer-btn.no-btn {
+    background-color: #ff5e5e; /* Red color */
+    color: white;
+}
+
+.answer-btn.no-btn:hover {
+    background-color: #ff4c4c;
+}
+
+/* Button Container (to position them side by side) */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between the buttons */
+}
+
+/* Footer Styling */
 footer {
-    background: #ffebef;
-    padding: 20px;
+    background-color: #ff77b9;
+    padding: 1.5rem 0;
+    text-align: center;
+    color: white;
+}
+
+/* Countdown Timer Styling */
+.countdown {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+}
+
+/* Styling for Images (Rounded and Small) */
+img {
+    width: 150px; /* Set the width of the image */
+    height: 150px; /* Set the height to match the width for a perfect circle */
+    border-radius: 50%; /* This makes the image round */
+    object-fit: cover; /* Ensures the image fits the circle without distortion */
+    display: block;
+    margin: 20px auto; /* Centers the image horizontally */
+}
+
+/* Responsive adjustments (optional) */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    img {
+        width: 120px; /* Make the image smaller on mobile */
+        height: 120px;
+    }
+
+    .answer-btn {
+        font-size: 1rem; /* Smaller button text */
+        padding: 0.8rem 1.5rem; /* Adjust button size for mobile */
+    }
+
+    .button-container {
+        flex-direction: column; /* Stack buttons vertically on mobile */
+        gap: 10px;
+    }
+}
+/* Timer Styling */
+.countdown {
+    font-size: 2rem;  /* Larger font size for better visibility */
+    margin-top: 2rem;
+    color: #333;  /* Dark color to make it stand out */
     text-align: center;
 }
 
-footer p {
-    font-size: 1.1em;
-    color: #b34d70;
+/* Additional styles for the Timer (Desktop) */
+@media (min-width: 769px) {
+    .countdown {
+        font-size: 2.5rem;  /* Slightly larger font for desktop */
+    }
+}
+
+/* Responsive adjustments for Timer (Mobile) */
+@media (max-width: 768px) {
+    .countdown {
+        font-size: 1.8rem;  /* Slightly smaller font on mobile */
+    }
+}
+/* Modal (Terms and Conditions) Styles */
+.modal {
+    display: none;  /* Hidden by default */
+    position: fixed;
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with transparency */
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;  /* Adjust width */
+    max-width: 600px;
+}
+
+.modal-content h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.modal-content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.modal-content ul li {
+    margin-bottom: 10px;
+}
+
+#submitBtn {
+    background-color: #4CAF50; /* Green color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+#submitBtn:hover {
+    background-color: #45a049;
 }
