@@ -4,42 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Will You Be My Girlfriend?</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Hey [Her Name], I Have Something Special to Ask...</h1>
-            <p class="intro">Welcome to a little surprise I’ve been planning just for you.</p>
-        </div>
-    </header>
+    <div class="home-section">
+        <h1 class="fade-in">Welcome, [Her Name]</h1>
+        <p class="fade-in delay">I've made something special for you...</p>
+        <a href="#story-section" class="next-button">See More</a>
+    </div>
+    
+    <div id="story-section">
+        <h2>Our Story So Far</h2>
+        <p class="fade-in">A little story about our journey together...</p>
+        <a href="#question-section" class="next-button">Next</a>
+    </div>
 
-    <section id="story">
-        <div class="container">
-            <h2>Our Journey</h2>
-            <p>This is the story of how we met and the amazing memories we’ve shared...</p>
-            <p>More personal details about your relationship—special moments and memories...</p>
-        </div>
-    </section>
+    <div id="question-section">
+        <h2>Will You Be My Girlfriend?</h2>
+        <div class="heart-animation"></div>
+        <button onclick="answerYes()">Yes</button>
+        <button onclick="answerYes()">Yes, of course!</button>
+    </div>
 
-    <section id="question">
-        <div class="container">
-            <h2>The Big Question!</h2>
-            <p class="heartfelt-message">So... will you be my girlfriend?</p>
-            <div class="countdown">
-                <p>Time until the big reveal:</p>
-                <p id="timer">Loading...</p>
-            </div>
-            <button class="answer-btn" onclick="showAnswer()">YES!</button>
-            <p id="response" class="response hidden">I knew you’d say yes! 💖</p>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>Can't wait to hear from you. 💖</p>
-        </div>
-    </footer>
+    <div id="answer-section" class="hidden">
+        <h2>Thank you!</h2>
+        <p>I'm so happy to have you in my life!</p>
+    </div>
 
     <script src="script.js"></script>
 </body>
