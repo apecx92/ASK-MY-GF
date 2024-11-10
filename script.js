@@ -1,14 +1,18 @@
-// JavaScript to handle button clicks and page transitions
-document.getElementById("startButton").addEventListener("click", function() {
-  document.getElementById("landing").style.display = "none";
-  document.getElementById("proposal").style.display = "block";
-});
+// script.js
+const countdownDate = new Date("Nov 9, 2024 18:00:00").getTime();
 
-document.getElementById("yesButton").addEventListener("click", function() {
-  alert("YAY! I'm so happy you said yes!");
-  // You can redirect to a special page or just keep the message.
-});
+const timer = setInterval(function() {
+    const now = new Date().getTime();
+    const distance = countdownDate - now;
 
-document.getElementById("noButton").addEventListener("click", function() {
-  alert("That's okay! Take your time.");
-});
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("timer").innerHTML = hours + "h " + minutes + "m " + seconds + "s ";
+
+    if (distance < 0) {
+        clearInterval(timer);
+        document.getElementById("timer").innerHTML = "It's time to ask!";
+    }
+}, 1000);
