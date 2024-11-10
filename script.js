@@ -1,6 +1,9 @@
 // script.js
-const countdownDate = new Date("Nov 9, 2024 18:00:00").getTime();
 
+// Set the date and time for the countdown
+const countdownDate = new Date("Nov 15, 2024 18:00:00").getTime();
+
+// Update the countdown every second
 const timer = setInterval(function() {
     const now = new Date().getTime();
     const distance = countdownDate - now;
@@ -11,8 +14,14 @@ const timer = setInterval(function() {
 
     document.getElementById("timer").innerHTML = hours + "h " + minutes + "m " + seconds + "s ";
 
+    // If the countdown is over, display a message
     if (distance < 0) {
         clearInterval(timer);
         document.getElementById("timer").innerHTML = "It's time to ask!";
     }
 }, 1000);
+
+// Function to display the response message
+function showAnswer() {
+    document.getElementById("response").classList.remove("hidden");
+}
